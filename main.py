@@ -5,7 +5,7 @@ import argparse
 
 def get_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "--target", dest="target", help="Sets Target IP Network Range To Scan ex: 192.168.1.0\24")
+    parser.add_argument("-t", "--target", dest="target", help="Sets Target IP Network Range To Scan ex: 192.168.1.0/24")
     (options) = parser.parse_args()
     if not options.target:
         parser.error("[-] Please specify an Target IP Range, use --help for more info.")
