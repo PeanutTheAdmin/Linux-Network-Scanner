@@ -28,6 +28,10 @@ def print_result(resultsList):
     for client in resultsList:
         print(f"{client['ip']}\t\t{client['mac']}")
 
-options = get_arguments()
-scan_result = scan(options.target)
-print_result(scan_result)
+def main():
+    options = get_arguments()
+    scan_result = scan(options.target)
+    print_result(scan_result)
+
+if __name__ == "__main__":
+    main()
